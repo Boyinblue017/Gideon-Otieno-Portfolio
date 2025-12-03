@@ -14,7 +14,7 @@
 
         <nav class="navbar" id="navbar">
             <a href="#" class="active">Home</a>
-            <a href="#">About</a>
+            <a href="#" >About</a>
             <a href="#">Services</a>
             <a href="#">Blog</a>
             <a href="#">Pages</a>
@@ -31,9 +31,9 @@
         <div class="home-content">
             <h1>Hi am Gideon Otieno</h1>
             <h2>Web Developer</h2>
-            <p>
-                I’m a software developer who writes code to learn, create, and make the world a better place.
-                I love solving problems, building projects, and using technology to have a positive impact.
+            <p>I’m a software developer who writes code to learn, create, and make the world a better place.
+                I love solving problems, building projects, and using technology to have a positive impact. I can give your business an new Creative
+                start right away.
             </p>
             <div class="btn-box">
                 <a href="#">Hire me</a>
@@ -47,6 +47,7 @@
             <a href="#"></a>
            
         </div>
+        
     </section>
     <section class="About">
         <div class="image">
@@ -55,11 +56,12 @@
         </div>
         <div class="About-content">
             <h3>MY BIOGRAPHY</h3>
-            <H4>A Lead WEB Designer & Software Developer Based in Kenya</H4>
+            <H4>Web Designer & Software Developer Based in Kenya</H4>
             <p>
-                passionate software developer who writes code to learn, create, and make the world a better place.
+                Passionate software developer who writes code to learn, create, and make the world a better place.
                 I enjoy solving problems, building efficient programs, and exploring new technologies that can have a positive impact.
                 Every project I work on is an opportunity to grow my skills and contribute something meaningful to the world.
+            
             
             </p>
             <div class="line-above"></div>
@@ -97,63 +99,100 @@
         </div>
         
     </section>
-    <section class="Services">
+    <section class="services" id="services">
 
-        <div class="h5">
-            <span>What I Do For You</span>
-        </div>
+        <h5>What I Do For You</h5>
     
-        <div class="Services-content">
+        <div class="services-grid">
             
-          <div class="container">
-            <div class="column">
-               <b>Web Development</b>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bi bi-laptop"></i>
+                </div>
+                <h6>Web Development</h6>
                <br><br>
                <p>Built a personal portfolio website with responsive design, social media links, image integration, and interactive UI elements.</p>
 
             </div>
-            <div class="column">
-                <b>App Development</b> 
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bi bi-phone"></i>
+                </div>
+                <h6>App Development</h6>
                 <br><br>
                 <p>Developing a fitness app with workout tracking, goal setting, progress monitoring, and interactive user interface features.</p>
             </div>
-            <div class="column">
-                <b>Photography</b>
+            <div class="service-card">
+                <div class="service-icon">
+                   <i class="bi bi-camera"></i>
+                </div>
+                <h6>Photography</h6>
                 <br><br>
                 <p>Captured and curated high-quality photos, edited images, and showcased visual content for portfolio presentation.</p>
             </div>
           </div>
         </div>
+        <div class="more-services">
+            <a href="#">More Services →</a>
+        </div>
 
     </section>
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const navbar = document.getElementById('navbar');
-
-        menuToggle.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-            const icon = menuToggle.querySelector('i');
-            if (navbar.classList.contains('active')) {
-                icon.classList.remove('bi-list');
-                icon.classList.add('bi-x');
-            } else {
-                icon.classList.remove('bi-x');
-                icon.classList.add('bi-list');
-            }
-        });
-
-        // Close menu when clicking on a link
-        const navLinks = navbar.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navbar.classList.remove('active');
-                const icon = menuToggle.querySelector('i');
-                icon.classList.remove('bi-x');
-                icon.classList.add('bi-list');
-            });
-        });
-    </script>
+    <section class="skills">
+        <div class="skills-image">
+            <img src="https://i.ibb.co/SDdTgn5J/edited-city.jpg" alt="me">
+        </div>
+        <div class="skills-content">
+            <h7>MY SKILLS</h7>
+            <h6>My Featured Skills</h6>
+            <p>I Specialize in Branding and Strategy, and am passionate about creating Awesome Portfolio work. And I always ready to Impress the audience with my Creativity.</p>
+            
+            <div class="skill-bar">
+                <label>UI/UX Design</label>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 90%;"></div>
+                </div>
+            </div>
+            
+            <div class="skill-bar">
+                <label>Ideas & Technology</label>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+            
+            <div class="skill-bar">
+                <label>Branding Design</label>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%;"></div>
+                </div>
+            </div>
+            
+            <div class="skill-bar">
+                <label>Responsive Web Design</label>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 95%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="stats">
+        <div class="stat-item">
+            <h3>5</h3>
+            <p>Finished Projects</p>
+        </div>
+        <div class="stat-item">
+            <h3>5</h3>
+            <p>Working Hours</p>
+        </div>
+        <div class="stat-item">
+            <h3>5</h3>
+            <p>Online Support</p>
+        </div>
+        <div class="stat-item">
+            <h3>2</h3>
+            <p>Happy Customers</p>
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
-
 </html>
-

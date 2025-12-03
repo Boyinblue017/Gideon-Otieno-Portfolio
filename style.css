@@ -265,70 +265,217 @@ body {
 
 
 
-.Services {
-    margin: 40px ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 80px 60px;
-    height: 70vh;
-    background-color: white;
-    color: #081b29;
-    box-sizing: border-box;
+.services {
+    background: #f5f7f9;
+    padding: 5rem 5%;
 }
 
-.services-content {
-    width: 100%;
-    max-width:90;
-    text-align: center;
   
-}
 
-.h5{
-    font-size: 25px;
-    font-weight: 600;
-    color: #081b29;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-}
-    
-
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1000px;
-    width: 100%;
-    border-radius: 12px;
-    font-weight: 500;
-    
-    
-}
-
-.column {
-    flex: 1;
-    padding: 20px;
-    background-color: beige;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.services h5{
     text-align: center;
+    font: 2rem;
+    font-size: 32px;
+    margin-bottom: 4rem;
+    color: #1a3a42;
+}
+    
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 
+.service-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
 
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
 
+.service-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    background: #e8f5f1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #1abc9c;
+}
 
+.service-card h6 {
+    font-size: 1.3rem;
+    margin-bottom:0.5rem;
+    color: #1a3a42;
+}
 
+.service-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
 
-/* Mobile Responsive Styles */
-@media (max-width: 768px) {
-    /* Header and Navigation */
+.more-services {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.more-services a {
+    color: #1abc9c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* skills section */
+
+.skills {
+
+    padding: 5rem 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    background: white;
+}
+
+.skills-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 1px;
+
+}
+
+.skills-content h7 {
+    color: #1abc9c;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.skills-content h6 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #1a3a42;
+}
+
+.skills-content > p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.skill-bar {
+    margin-bottom: 2rem;
+}
+
+.skill-bar label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e8f5f1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #1abc9c, #16a085);
+    border-radius: 10px;
+}
+/* Stats Section */
+.stats {
+    padding: 2rem 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    text-align: center;
+    background: #f5f7f9;
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    color: #1a3a42;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: #666;
+}
+
+/* Responsive Design - Mobile and Tablet */
+
+/* Tablet Styles */
+@media (max-width: 968px) {
     .header {
-        padding: 15px 5%;
+        padding: 20px 5%;
     }
 
+    .home {
+        padding: 0 5%;
+    }
+
+    .home-content h2 {
+        font-size: 60px;
+    }
+
+    .About {
+        padding: 10%;
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .image {
+        padding-left: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .About-content {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .line-above {
+        width: 100%;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .skills-image {
+        text-align: center;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
     .menu-toggle {
         display: block;
     }
@@ -343,10 +490,12 @@ body {
         background: #081b29;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        padding: 80px 30px 30px;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
         transition: right 0.3s ease;
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        z-index: 99;
     }
 
     .navbar.active {
@@ -355,20 +504,21 @@ body {
 
     .navbar a {
         margin: 15px 0;
-        font-size: 18px;
+        font-size: 20px;
+        display: block;
         width: 100%;
-        padding: 10px 0;
+        text-align: center;
+        padding: 10px;
     }
 
-    /* Home Section */
     .home {
         padding: 0 5%;
-        height: 100vh;
-        text-align: center;
+        padding-top: 80px;
     }
 
     .home-content {
         max-width: 100%;
+        text-align: center;
     }
 
     .home-content h1 {
@@ -376,49 +526,37 @@ body {
     }
 
     .home-content h2 {
-        font-size: 50px;
-        -webkit-text-stroke: 1.5px #ededed;
+        font-size: 45px;
     }
 
     .home-content p {
         font-size: 16px;
-        margin: 15px 0 30px;
+        margin: 20px 0 30px;
     }
 
     .home-content .btn-box {
-        flex-direction: column;
         width: 100%;
-        max-width: 300px;
-        height: auto;
+        flex-direction: column;
         gap: 15px;
-        margin: 0 auto;
+        height: auto;
     }
 
     .btn-box a {
         width: 100%;
-        height: 45px;
-        font-size: 16px;
+        max-width: 280px;
+        margin: 0 auto;
     }
 
-    /* About Section */
     .About {
-        flex-direction: column;
         padding: 80px 5% 40px;
+        flex-direction: column;
         height: auto;
-        min-height: 100vh;
-    }
-
-    .image {
-        width: 100%;
-        padding: 0;
-        top: 0;
-        margin-bottom: 30px;
-        text-align: center;
+        min-height: auto;
     }
 
     .About-content {
-        max-width: 100%;
         padding: 20px 0;
+        text-align: center;
     }
 
     .About-content h3 {
@@ -426,23 +564,23 @@ body {
     }
 
     .About-content h4 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .About-content p {
         font-size: 14px;
-        margin: 15px 0;
-    }
-
-    .line-above {
-        width: 100%;
-        margin: 20px 0;
+        text-align: left;
     }
 
     .About-content ul {
         grid-template-columns: 1fr;
         gap: 15px;
-        font-size: 14px;
+        text-align: left;
+    }
+
+    .line-above {
+        width: 100%;
+        margin: 20px 0;
     }
 
     .follow-section {
@@ -452,82 +590,76 @@ body {
         margin-top: 20px;
     }
 
-    .follow-section span {
-        font-size: 15px;
-        margin-top: 0;
-    }
-
     .social-icons-inline {
         display: flex;
         gap: 10px;
     }
 
     .social-icons-inline i {
-        font-size: 1.3rem;
         margin-right: 0;
-        margin-top: 0;
     }
 
     .About-content .btn-box {
-        flex-direction: column;
         width: 100%;
-        max-width: 300px;
-        height: auto;
+        flex-direction: column;
         gap: 15px;
-        margin: 30px 0 0 0;
+        margin: 30px 0;
     }
 
-    /* Services Section */
-    .Services {
-        padding: 60px 5%;
-        height: auto;
-        min-height: auto;
-        margin: 0;
+    .services {
+        padding: 3rem 5%;
     }
 
-    .h5 {
-        font-size: 22px;
-        margin: 20px 0 30px;
+    .services h5 {
+        font-size: 26px;
+        margin-bottom: 2rem;
     }
 
-    .container {
-        flex-direction: column;
-        gap: 20px;
-        max-width: 100%;
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
-    .column {
-        width: 100%;
-        padding: 25px 20px;
+    .service-card {
+        padding: 2rem;
     }
 
-    .column b {
-        font-size: 18px;
+    .skills {
+        padding: 3rem 5%;
+        grid-template-columns: 1fr;
     }
 
-    .column p {
-        font-size: 14px;
-        line-height: 1.6;
+    .skills-content {
+        text-align: center;
+    }
+
+    .skills-content h6 {
+        font-size: 1.5rem;
+    }
+
+    .skills-content > p {
+        text-align: left;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 2rem 5%;
+    }
+
+    .stat-item h3 {
+        font-size: 2rem;
     }
 }
 
+/* Small Mobile Styles */
 @media (max-width: 480px) {
-    /* Extra small devices */
     .header {
-        padding: 12px 4%;
+        padding: 15px 4%;
     }
 
     .logo {
-        font-size: 22px;
-    }
-
-    .menu-toggle {
-        font-size: 24px;
-    }
-
-    .navbar {
-        width: 80%;
-        padding: 70px 20px 20px;
+        font-size: 20px;
     }
 
     .home-content h1 {
@@ -535,62 +667,46 @@ body {
     }
 
     .home-content h2 {
-        font-size: 40px;
-        -webkit-text-stroke: 1px #ededed;
+        font-size: 35px;
     }
 
     .home-content p {
         font-size: 14px;
-        margin: 12px 0 25px;
-    }
-
-    .home-content .btn-box {
-        max-width: 100%;
-    }
-
-    .btn-box a {
-        font-size: 15px;
-        height: 42px;
-    }
-
-    .About {
-        padding: 70px 4% 30px;
-    }
-
-    .About-content h3 {
-        font-size: 12px;
     }
 
     .About-content h4 {
-        font-size: 18px;
-    }
-
-    .About-content p {
-        font-size: 13px;
-    }
-
-    .About-content ul {
-        font-size: 13px;
-    }
-
-    .Services {
-        padding: 50px 4%;
-    }
-
-    .h5 {
         font-size: 20px;
     }
 
-    .column {
-        padding: 20px 15px;
+    .services h5 {
+        font-size: 22px;
     }
 
-    .column b {
-        font-size: 16px;
+    .service-card {
+        padding: 1.5rem;
     }
 
-    .column p {
-        font-size: 13px;
+    .service-card h6 {
+        font-size: 1.1rem;
+    }
+
+    .skills-content h6 {
+        font-size: 1.3rem;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2.5rem;
     }
 }
-    
+
+
+
+
+
+
+
